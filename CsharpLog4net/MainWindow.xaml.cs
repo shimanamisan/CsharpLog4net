@@ -17,12 +17,16 @@ namespace CsharpLog4net
         {
             InitializeComponent();
 
-            _logger.Info("ログを出力。");  // 2022-02-21 20:19:19,109[1] INFO - ログを出力。
-            _logger.Debug("ログを出力。"); // 2022 - 02 - 21 20:21:02,624[1] DEBUG - ログを出力。
-            _logger.Warn("ログを出力。");  // 2022 - 02 - 21 20:21:02,625[1] WARN - ログを出力。
-            _logger.Fatal("ログを出力。"); // 2022 - 02 - 21 20:21:02,625[1] FATAL - ログを出力。
-            _logger.Error("ログを出力。"); // 2022 - 02 - 21 20:21:02,625[1] ERROR - ログを出力。
+        
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _logger.Info("ログを出力。");
+            _logger.Debug("ログを出力。");
+            _logger.Warn("ログを出力。");
+            _logger.Fatal("ログを出力。");
+            _logger.Error("ログを出力。");
             // 出力レベルを指定できる
         }
     }
