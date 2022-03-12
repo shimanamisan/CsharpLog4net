@@ -1,4 +1,6 @@
 ﻿using log4net; // 追加
+using System;
+using System.Collections.Generic;
 using System.Reflection; // 追加
 using System.Windows;
 
@@ -16,11 +18,10 @@ namespace CsharpLog4net
         public MainWindow()
         {
             InitializeComponent();
-
-        
+       
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
             _logger.Info("ログを出力。");
             _logger.Debug("ログを出力。");
@@ -34,6 +35,21 @@ namespace CsharpLog4net
                 "世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。" +
                 "世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。" +
                 "世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。世代管理確認用のログ。");
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var lists = new List<int>();
+
+                // リストの中身が無いので必ず例外が発生
+                var lsit = lists[0];
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("例外が発生：", ex);
+            }
         }
     }
 }
